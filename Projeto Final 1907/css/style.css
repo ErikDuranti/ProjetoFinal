@@ -1,0 +1,446 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+/* Dando inicio na Navbar de cima, onde coloco a logo e os botões de login e registro */
+.topnav {
+    /* overflow: hidden; */
+    width: 100%;
+    height: 125px;
+    background: #262626;
+}
+
+.topnav form{
+    float: left;
+    /* margin-top: 25px;
+    margin-left: 15px; */
+    width: 250px;
+    height: 125px;
+    /* padding: 10px; */
+}
+.topnav form button{
+    display: inline-block;
+    width: 99px;
+    height: 44px;
+    border: 1px solid;
+    border-radius: 1em;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+.topnav a {
+    float: left;
+    width: 102px;
+    height: 125px;
+}
+
+.topnav a img{
+    margin-top: 20px;
+    margin-left: 185px;
+}
+#register:hover{
+    background-color: blue;
+}
+#login:hover{
+    background-color: blue;
+}
+.topnav input[type=text] {
+    float: right;
+    height: 32px;
+    width: 300px;
+    margin-right: 35px;
+    margin-top: 42px;
+    border: 2px solid #262626;    
+    border-radius: 30px;
+}
+
+#search{
+    position: absolute;
+    height: 16px;
+    top: 52px;
+    left: 955px;
+}
+
+.botnav{
+    position: absolute;
+    width: 500px;
+    height: 59px;  
+    margin-left: 250px ;
+    background: #9DA657;
+    border-radius: 0px 0px 20px 20px;
+    z-index: 10000;
+}
+
+.botnav ul li {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 25px;
+    padding: 5px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+}
+
+.menu-topo ul li a:link,
+.menu-topo ul li a:visited{
+    color: #262626;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-topo ul li a:active{
+    color: #256315;
+}
+
+/* ------------------- SLIDER -----------------  */
+/* Video utilizado para fazer o slider https://www.youtube.com/watch?v=F33_O-lcx20  */
+
+.slider{
+    height: 400px;
+    width: 100%;
+    position: relative;
+    /* margin: 50px auto; */
+    display: block;
+    z-index: 1;
+}
+
+.slider-item{
+    position: absolute;
+    padding: 200px 506.5px;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.flecha {
+    border: solid red;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.flecha-voltar{
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.flecha-avanco{
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^= "item"]{
+    display: none;
+}
+
+.item-1{
+    z-index: 2;
+    opacity: 1;
+    background: url('/img/diablo.jpg');
+    background-size: 100%;
+    background-position: center;
+}
+
+.item-2{
+    background: url('/img/hogwarts.jpg');
+    background-size: 100%;
+    background-position: center;
+}
+
+.item-3{
+    background: url('/img/zelda.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+*:target ~ .item-1{
+    opacity: 0;
+}
+
+#item-1:target ~ .item-1{
+    opacity: 1;
+}
+
+#item-2:target ~ .item-2, 
+#item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+
+.retangulo{
+    width: 500px;
+    height: 40px;  
+    margin-left: 250px;
+    background: #9FBF30;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.retangulo h2{
+    margin-left: 5px;
+    text-align: center;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #F2F2F2;
+}
+
+/* ------------------- NOTICIAS -----------------  */
+.noticia1 {
+    width: 100%;
+    height: 1200px;
+}
+
+
+.noticia h2 {
+    width: 210px;
+    height: 72px;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 72px;
+    color: #9DA657;
+    margin-left: 20px;      
+}
+
+.noticia hr{
+    width: 1000px;
+    height: 0px;
+    border: 1px solid #9DA657;
+}
+
+.noticia1{
+    width: 100%;
+}
+
+.not{
+    float: left;
+    /* margin-top: 10px; */
+    margin-left: 70px;
+    width: 350px;
+    height: 200px;
+    padding: 25px;
+}
+
+
+.noticia1 img {
+    float: left;
+    width: 200px;
+    height: 140px;
+    border-radius: 10px;
+    vertical-align: top;
+}
+
+.noticia1 p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #262626;
+}
+
+.noticia1 h5 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    color: #262626;
+}
+
+.noticia1 p,
+.noticia1 h5 {
+    padding: 5px;
+}
+
+
+/*------------------- SOBRE NOS----------------- */
+
+.sobrenos h2 {
+    width: 210px;
+    height: 72px;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 72px;
+    color: #9DA657;
+    margin-left: 20px;      
+}
+
+.sobrenos hr{
+    width: 1000px;
+    height: 0px;
+    border: 1px solid #9DA657;
+}
+
+.vant {
+    display: inline-block;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.vant article{
+    display: inline-block;
+    align-items: center;
+    width: 250px;
+    padding: 40px;
+}
+
+.vant img{
+    height: 88px;
+    width: 80px;
+    margin-left: 60px;
+}
+
+.vant p{
+    width: 200px;
+    padding: 15px;
+    margin-left: 10px;
+}
+
+
+.vant h4 {
+    width: 307px;
+    height: 78px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #9DA657;
+    /* text-align: center; */
+}
+
+/* ------------------- FORMULARIO DE CONTATO -----------------  */
+
+.contato-nos {
+    height: 450px;
+}
+
+.contato-nos h2{
+    width: 210px;
+    height: 60px;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 72px;
+    color: #9DA657;
+    margin-left: 20px;  
+}
+
+.contato-nos hr{
+    width: 1000px;
+    border: 1px solid #9DA657;
+}
+
+.contato-nos form{
+    padding: 15px;
+    height: 270px;
+    width: 250px;
+    margin-left: 350px;
+    margin-top: 55px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.contato-nos form input {
+    width: 250px;
+}
+
+.contato-nos form textarea{
+    margin-left: 12px;
+    margin-top: 15px;
+}
+
+.contato-nos form button {
+    width: 100px;
+    margin-left: 75px;
+    margin-top: 5px;
+    border-radius: 1em;
+}
+
+.contato-nos form button:hover {
+    background-color: grey;
+}
+
+ /*------------------- RODAPE ----------------- */
+.rodape {
+    display: inline-block;
+    width: 100%;
+    height: 280px;
+    background: #262626;
+}
+
+.contato h5{
+    width: 273px;
+    height: 35px;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 12px;
+    padding: 10px;
+    /* text-align: center; */
+    color: #F2F2F2;
+}
+
+.contato {
+    float: left;
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 100px;
+    height: 200px;
+}
+
+.contato a img{
+    /* display: inline-block; */
+    /* float: left; */
+    text-align: center;
+    width: 30px;
+    height: 40px;
+    /* margin: 2px 0px 2px 10px; */
+    padding: 6px;
+}
+
+.mapa {
+    display: inline-block;
+    margin-left: 450px;
+}
+
+.mapa h5 {
+    margin-top: 10px;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #F2F2F2;
+}
+
+.mapa p{
+    padding: 1px;
+    width: 300px;
+    color: #F2F2F2;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+}
+
+.mapa iframe {
+    /* float: left; */
+    padding: 2px;
+    height: 170px;
+    width: 300px;
+}
